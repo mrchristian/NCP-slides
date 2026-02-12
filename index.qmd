@@ -1,8 +1,8 @@
 ---
-title: "NCP Slides"
-subtitle: "A Reveal.js Presentation"
-author: "Your Name"
-date: today
+title: "Nextcloud Publishing - System Schematic"
+subtitle: "A software development project"
+author: "Simon Worthington"
+date: 2026-02-13
 ---
 
 ## Welcome to NCP Slides
@@ -39,14 +39,11 @@ mean(x)
 GraphViz supports various diagram types:
 
 ```{dot}
-digraph G {
-  A -> B;
-  A -> C;
-  B -> D;
-  C -> D;
-}
+digraph BookWorkflow {
+    rankdir=LR;
+    Authoring -> Production -> MakeBook -> Multiformat -> Packaging;
+    }
 ```
-
 ## Diagrams with Mermaid
 
 Mermaid diagrams for flowcharts, sequences, and more:
