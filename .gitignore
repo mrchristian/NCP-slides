@@ -1,7 +1,6 @@
 # .gitignore for Quarto projects
 
 # Build outputs
-docs/
 _freeze/
 
 # Quarto cache
