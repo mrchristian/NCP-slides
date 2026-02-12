@@ -25,7 +25,7 @@ Opens the presentation in a development server with live reload on file changes.
 quarto render
 ```
 
-Generates the HTML presentation in the `_output/` directory.
+Generates the HTML presentation in the `docs/` directory, ready for GitHub Pages deployment.
 
 ## Project Structure
 
@@ -33,7 +33,7 @@ Generates the HTML presentation in the `_output/` directory.
 .
 ├── _quarto.yml          # Quarto configuration
 ├── index.qmd            # Main slide file
-├── _output/             # Generated HTML/PDF (in .gitignore)
+├── docs/                # Generated HTML (tracked in git for GitHub Pages)
 └── README.md            # This file
 ```
 
@@ -42,10 +42,37 @@ Generates the HTML presentation in the `_output/` directory.
 Slides are written in `index.qmd` using Quarto markdown syntax.
 
 - Use `##` for slide headers
-- Use `:::notes` for speaker notes
+- Use `:::{.notes}` for speaker notes
 - Add columns, callouts, and code blocks as needed
 
 See [Quarto Reveal.js docs](https://quarto.org/docs/presentations/revealjs/) for full documentation.
+
+## Diagram Support
+
+### GraphViz Diagrams
+Create directed and undirected graphs using the `{dot}` code block:
+
+```{dot}
+digraph G {
+  A -> B;
+  B -> C;
+}
+```
+
+See [GraphViz documentation](https://graphviz.org/doc/info/lang.html) for all supported formats and syntax.
+
+### Mermaid Diagrams
+Create flowcharts, sequence diagrams, Gantt charts, and more using the `{mermaid}` code block:
+
+```{mermaid}
+flowchart LR
+  A[Start] --> B{Decision}
+  B -->|Yes| C[Process]
+  C --> D[End]
+```
+
+Supported diagram types: flowchart, sequence, gantt, pie, class, state, git, ER, user journey.
+See [Mermaid documentation](https://mermaid.js.org/) for details.
 
 ## Navigation
 
@@ -57,14 +84,11 @@ See [Quarto Reveal.js docs](https://quarto.org/docs/presentations/revealjs/) for
 
 ## Deployment
 
-The rendered HTML in `_output/` can be deployed to:
-- GitHub Pages (configure in repository settings)
-- Any static host (Netlify, Vercel, etc.)
-- Web server (Apache, Nginx, etc.)
+The `docs/` directory is committed to git and served automatically by GitHub Pages when configured in repository settings. No additional deployment steps required—just push to main.
 
 ## Tips
 
 - Keep slides focused and concise
-- Use speaker notes (`::notes`) for longer explanations
+- Use speaker notes (`:::{.notes}`) for longer explanations
 - Test code blocks in your preferred environment
 - Use consistent styling with Reveal.js themes
