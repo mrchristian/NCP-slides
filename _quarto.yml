@@ -1,0 +1,35 @@
+project:
+  output-dir: docs
+
+execute:
+  freeze: auto
+
+knitr:
+  opts_chunk:
+    echo: true
+    warning: false
+    message: false
+
+format:
+  revealjs:
+    theme: default
+    transition: slide
+    background-transition: fade
+    width: 1050
+    height: 700
+    margin: 0.1
+    min-scale: 0.2
+    max-scale: 2.0
+    controls: true
+    progress: true
+    center: true
+    hash: true
+    overview: true
+    keyboard: true
+    touch: true
+    help: true
+    slide-number: true
+    show-slide-number: all
+    previewLinks: false
+    mermaid:
+      theme: default

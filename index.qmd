@@ -1,0 +1,65 @@
+---
+title: "NCP Slides"
+subtitle: "A Reveal.js Presentation"
+author: "Your Name"
+date: today
+---
+
+## Welcome to NCP Slides
+
+This is a Quarto presentation using Reveal.js
+
+- Built with Quarto
+- Rendered with Reveal.js
+- Markdown-based slides
+
+## Getting Started
+
+You can add more slides by creating additional sections with `##`
+
+:::{.notes}
+Speaker notes go here - they won't be visible to the audience
+:::
+
+## Features
+
+- Syntax highlighting for code
+- Easy transitions
+- Speaker notes support
+- Keyboard navigation
+
+```r
+# Example code block
+x <- c(1, 2, 3, 4, 5)
+mean(x)
+```
+
+## Diagrams with GraphViz
+
+GraphViz supports various diagram types:
+
+```{dot}
+digraph G {
+  A -> B;
+  A -> C;
+  B -> D;
+  C -> D;
+}
+```
+
+## Diagrams with Mermaid
+
+Mermaid diagrams for flowcharts, sequences, and more:
+
+```{mermaid}
+flowchart LR
+  A[Start] --> B{Decision}
+  B -->|Yes| C[Process]
+  B -->|No| D[Skip]
+  C --> E[End]
+  D --> E
+```
+
+## Questions?
+
+Thanks for watching!
