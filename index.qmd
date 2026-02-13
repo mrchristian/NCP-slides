@@ -37,7 +37,7 @@ Speaker notes go here - they won't be visible to the audience
 ```
 
 ::: aside
-Pipeline key: Parts - blue, Data - orange, Software - green
+Pipeline key: Parts - blue; Data - orange, and; Software - green
 :::
 
 ## Config File - holds it all together {.smaller}
