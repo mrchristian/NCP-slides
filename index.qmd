@@ -8,7 +8,9 @@ footer: "CC-BY-SA 4.0 License"
 
 ## The NCP Pipeline Overview  {.smaller}
 
-Project objective: to enable multi-format book production for the Open Access textbook publisher OpenRewi using the open-source tech stack: Nextcloud for production, Zotero citation management, Quarto for computational book parts, and Thoth for metadata.
+Project objective: To enable multi-format book production for the Open Access textbook publisher 'OpenRewi'.
+
+Nextcloud is used as a foundation for a new open-source software tool and to support the tech stack. 
 
 ```{dot}
 //| file: diagrams/main.dot
