@@ -1,0 +1,74 @@
+digraph main {
+    layout=neato;
+    bgcolor="white";
+    splines=curved;
+    overlap=false;  
+    nodesep=0.5;    
+    ranksep=0.75;   
+
+    // Diagram label (version)
+    label="v 1.0 2026-02-13-13:46";
+    labelloc="t";       // top
+    fontsize=20;
+    fontname="Helvetica-Bold";
+
+    // A4 landscape in inches
+    page="11.69,8.27";
+    size="10.8,7.5!";
+    margin=0.4;
+
+    node [
+        fontname="Helvetica",
+        fontsize=16,
+        penwidth=2,
+        color="#4A90E2"
+    ];
+
+    // Workflow circle edges in salmon pink
+    edge [color="#FA8072", penwidth=2, arrowsize=1.2];
+
+    // Main workflow circles
+    node [shape=circle, style=filled, width=1.6, fixedsize=true, fillcolor="#EAF3FF"];
+    n1 [label="1.\nAuthoring", pos="0,0!"];
+    n2 [label="2.\nProduction", pos="2,1.5!"];
+    n3 [label="3.\nMake Book", pos="4,0!"];
+    n4 [label="4.\nMulti-format", pos="6,-1.5!"];
+    n5 [label="5.\nPackaging", pos="8,0!"];
+
+    n1 -> n2 [minlen=2];
+    n2 -> n3 [minlen=2];
+    n3 -> n4 [minlen=2];
+    n4 -> n5 [minlen=2];
+
+    // Tool/system boxes (green)
+    node [shape=box, style="rounded,filled", fillcolor="#B9EAB3", width=2.4, height=0.9];
+    edge [color="#4A90E2", penwidth=2, arrowsize=1.2];  // tool/system links in blue
+
+    // Authoring tools
+    wp  [label="Word processor", pos="-1.2,0.8!"];
+    zot [label="Zotero", pos="-1.2,-0.8!"];
+    wp  -> n1 [minlen=1.5];
+    zot -> n1 [minlen=1.5];
+
+    // Production systems
+    nc  [label="Nextcloud", pos="1.5,2.5!"];
+    th  [label="Thoth", pos="2.5,2.5!"];
+    nc -> n2 [minlen=1.5];
+    th -> n2 [minlen=1.5];
+
+    // Make Book software
+    nos [label="New software (MB)", pos="4.4,1!"];
+    nos -> n3 [minlen=1.5];
+
+    // Multi-format tool
+    qp  [label="Quarto / Pandoc", pos="6.2,0!"];
+    qp -> n4 [minlen=1.5];
+
+    // Packaging tools
+    qpk [label="Quarto",  pos="7.5,-1.5!"];
+    jup [label="Jupyter", pos="8,-1.5!"];
+    gl  [label="GitLab",  pos="8.5,-1.5!"];
+    qpk -> n5 [minlen=1.5];
+    jup -> n5 [minlen=1.5];
+    gl  -> n5 [minlen=1.5];
+}

@@ -30,18 +30,48 @@ Parts of a Book. [See Chicago Manual of Style](https://www.chicagomanualofstyle.
 Speaker notes go here - they won't be visible to the audience
 :::
 
-## Features
+## Parts, Dataflow, and Software
 
-- Syntax highlighting for code
-- Easy transitions
-- Speaker notes support
-- Keyboard navigation
-
-```r
-# Example code block
-x <- c(1, 2, 3, 4, 5)
-mean(x)
+```{dot}
+//| file: diagrams/data.dot
 ```
+
+::: aside
+Key: Parts - blue, Data - orange, Software - green
+:::
+
+## Config File - holds it all together {.smaller}
+
+```yaml
+# A Quarto project configuration file (_quarto.yml)  
+project:
+  type: book
+book:
+  title: "Book Title"
+  author: "Author Name"
+  date: "2026-02-13"
+  doi: "10.1234/example.doi"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - notebook.ipynb
+    - references.qmd
+bibliography: references.bib
+repositories:
+  - name: "GitLab"
+    url: "https://gitlab.com/account/repo"
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+  epub:
+    cover-image: cover.png
+```
+
+::: aside
+The challenge is how to get all the part into the  [Quarto Book Config file](https://quarto.org/docs/books/#config-file).  
+:::
 
 ## Diagrams with GraphViz
 
