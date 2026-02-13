@@ -12,7 +12,7 @@
 
   <meta name="author" content="Team NCP: VEStOR (FHP); TIB">
   <meta name="dcterms.date" content="2026-02-13">
-  <title>Nextcloud Publishing (NCP) - System Schematic</title>
+  <title>Nextcloud Publishing (NCP) - Pipeline Schematic</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -396,8 +396,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Nextcloud Publishing (NCP) - System Schematic</h1>
-  <p class="subtitle">An open-source software development project</p>
+  <h1 class="title">Nextcloud Publishing (NCP) - Pipeline Schematic</h1>
+  <p class="subtitle">A first stage Beta open-source software development project</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -409,8 +409,9 @@ Team NCP: VEStOR (FHP); TIB
 
   <p class="date">2026-02-13</p>
 </section>
-<section id="the-ncp-system-overview" class="slide level2 center">
-<h2>The NCP System Overview</h2>
+<section id="the-ncp-pipeline-overview" class="slide level2 smaller center">
+<h2>The NCP Pipeline Overview</h2>
+<p>Project objective: to enable multi-format book production for the Open Access textbook publisher OpenRewi using the open-source tech stack: Nextcloud for production, Zotero citation management, Quarto for computational book parts, and Thoth for metadata.</p>
 <div class="cell" data-file="diagrams/main.dot" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -482,14 +483,49 @@ Team NCP: VEStOR (FHP); TIB
 </g>
 </svg>
 </div>
-<p></p><figcaption> Project objective: As a Beta for the Open Access publisher OpenRewi to enable multi-format book production using Nextcloud, Zotero citation management, and Quarto for computational book parts.</figcaption> </figure><p></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
 </section>
-<section id="getting-started" class="slide level2 center">
-<h2>Getting Started</h2>
-<p>You can add more slides by creating additional sections with <code>##</code></p>
+<section id="pipeline-parts" class="slide level2 smaller center">
+<h2>Pipeline Parts</h2>
+<p><em>Definitions and tech stack</em></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>1. Authoring</th>
+<th>2. Production</th>
+<th>3. Make Book</th>
+<th>4. Multi-format</th>
+<th>5. Packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A. Creating word processor documents<br>B. Creating &amp; using citations</td>
+<td>A. Editorial and production tasks: Review to file revision, etc<br>B. Metadata and PID use</td>
+<td>A. Collate ODT files<br>B. Encode and organisation <strong><em>Parts of a Book</em></strong><br>C. Book configuration</td>
+<td>A. Convert to multi-format: PDF, PoD, web, source, etc<br>B. Automatic layout styling<br>C. Preview<br>D. Jupyter Notebooks</td>
+<td>A. Store all outputs<br>C. Git revisioned<br>D. Public / private<br>D. Website option</td>
+</tr>
+<tr class="even">
+<td>Open-source word processor TBC; Zotero</td>
+<td>Nextcloud: Thoth</td>
+<td><em>New original software: NCP Make Book</em></td>
+<td>Quarto / Pandoc; Jupyter</td>
+<td>Quarto; GitLab</td>
+</tr>
+</tbody>
+</table>
+
 <aside class="notes">
 <p>Speaker notes go here - they won’t be visible to the audience</p>
 <style type="text/css">
@@ -503,7 +539,9 @@ Team NCP: VEStOR (FHP); TIB
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
+<aside><div>
+<p>Parts of a Book. <a href="https://www.chicagomanualofstyle.org/book/ed17/part1/ch01/psec001.html">See Chicago Manual of Style</a></p>
+</div></aside></section>
 <section id="features" class="slide level2 center">
 <h2>Features</h2>
 <ul>

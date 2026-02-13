@@ -1,21 +1,31 @@
 ---
-title: "Nextcloud Publishing (NCP) - System Schematic"
-subtitle: "An open-source software development project"
+title: "Nextcloud Publishing (NCP) - Pipeline Schematic"
+subtitle: "A first stage Beta open-source software development project"
 author: "Team NCP: VEStOR (FHP); TIB"
 date: today
 footer: "CC-BY-SA 4.0 License"
 ---
 
-## The NCP System Overview
+## The NCP Pipeline Overview  {.smaller}
+
+Project objective: to enable multi-format book production for the Open Access textbook publisher OpenRewi using the open-source tech stack: Nextcloud for production, Zotero citation management, Quarto for computational book parts, and Thoth for metadata.
+
 ```{dot}
-//| fig-cap: "Project objective: As a Beta for the Open Access publisher OpenRewi to enable multi-format book production using Nextcloud, Zotero citation management, and Quarto for  computational book parts."
 //| file: diagrams/main.dot
 ```
 
-## Getting Started
+## Pipeline Parts {.smaller}
 
-You can add more slides by creating additional sections with `##`
+_Definitions and tech stack_
 
+| 1. Authoring | 2. Production | 3. Make Book | 4. Multi-format | 5. Packaging |
+|---|---|---|---|---|
+| A. Creating word processor documents<br>B. Creating & using citations | A. Editorial and production tasks: Review to file revision, etc<br>B. Metadata and PID use | A. Collate ODT files<br>B. Encode and organisation **_Parts of a Book_**<br>C. Book configuration | A. Convert to multi-format: PDF, PoD, web, source, etc<br>B. Automatic layout styling<br>C. Preview<br>D. Jupyter Notebooks | A. Store all outputs<br>C. Git revisioned<br>D. Public / private<br>D. Website option |
+| Open-source word processor TBC; Zotero | Nextcloud: Thoth | _New original software: NCP Make Book_ | Quarto / Pandoc; Jupyter  | Quarto; GitLab |
+
+::: aside
+Parts of a Book. [See Chicago Manual of Style](https://www.chicagomanualofstyle.org/book/ed17/part1/ch01/psec001.html)  
+:::
 :::{.notes}
 Speaker notes go here - they won't be visible to the audience
 :::
