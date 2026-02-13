@@ -1,0 +1,33 @@
+digraph main {
+    rankdir=LR;
+    bgcolor="white";
+    splines=true;
+    nodesep=1;
+    ranksep=1.2;
+
+    node [
+        shape=circle,
+        style=filled,
+        fontname="Helvetica",
+        fontsize=16,
+        width=1.6,
+        fixedsize=true,
+        penwidth=2,
+        color="#4A90E2",
+        fillcolor="#EAF3FF"
+    ];
+
+    edge [
+        color="#4A90E2",
+        penwidth=2,
+        arrowsize=1.2
+    ];
+
+    n1 [label="1.\nAuthoring"];
+    n2 [label="2.\nProduction"];
+    n3 [label="3.\nMake Book"];
+    n4 [label="4.\nMulti-format"];
+    n5 [label="5.\nPackaging"];
+
+    n1 -> n2 -> n3 -> n4 -> n5;
+}

@@ -1,17 +1,16 @@
 ---
-title: "Nextcloud Publishing - System Schematic"
-subtitle: "A software development project"
-author: "Simon Worthington"
-date: 2026-02-13
+title: "Nextcloud Publishing (NCP) - System Schematic"
+subtitle: "An open-source software development project"
+author: "Team NCP: VEStOR (FHP); TIB"
+date: today
+footer: "CC-BY-SA 4.0 License"
 ---
 
-## Welcome to NCP Slides
-
-This is a Quarto presentation using Reveal.js
-
-- Built with Quarto
-- Rendered with Reveal.js
-- Markdown-based slides
+## The NCP System Overview
+```{dot}
+//| fig-cap: "Project objective: As a Beta for the Open Access publisher OpenRewi to enable multi-format book production using Nextcloud, Zotero citation management, and Quarto for  computational book parts."
+//| file: diagrams/main.dot
+```
 
 ## Getting Started
 
@@ -39,10 +38,9 @@ mean(x)
 GraphViz supports various diagram types:
 
 ```{dot}
-digraph BookWorkflow {
-    rankdir=LR;
-    Authoring -> Production -> MakeBook -> Multiformat -> Packaging;
-    }
+//| label: fig-1  
+//| fig-cap: "Main technical workflow sections 1-5"
+//| file: diagrams/main.dot
 ```
 ## Diagrams with Mermaid
 
