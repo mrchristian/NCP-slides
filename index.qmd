@@ -53,12 +53,12 @@ book:
   doi: "10.1234/example.doi"
   chapters:
     - index.qmd
-    - intro.qmd
+    - data.qmd
     - notebook.ipynb
     - references.qmd
 bibliography: references.bib
 repositories:
-  - name: "GitLab"
+  - name: "Online Book Repository"
     url: "https://gitlab.com/account/repo"
 format:
   html:
