@@ -386,10 +386,6 @@
       margin-right: 0; 
     }
   </style>
-  <meta name="mermaid-theme" content="default">
-  <script src="index_files/libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="index_files/libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="index_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -411,8 +407,7 @@ Team NCP: VEStOR (FHP); TIB
 </section>
 <section id="the-ncp-pipeline-overview" class="slide level2 smaller center">
 <h2>The NCP Pipeline Overview</h2>
-<p>Project objective: To enable multi-format book production for the Open Access textbook publisher ‘OpenRewi’.</p>
-<p>Nextcloud is used as a foundation for a new open-source software tool and to support the tech stack.</p>
+<p>Project objective: To enable multi-format book production for the Open Access textbook publisher ‘OpenRewi’. Nextcloud is used as a foundation for a new open-source software tool and to support the pipeline tech stack.</p>
 <div class="cell" data-file="diagrams/main.dot" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -511,14 +506,14 @@ Team NCP: VEStOR (FHP); TIB
 </thead>
 <tbody>
 <tr class="odd">
-<td>A. Creating word processor documents<br>B. Creating &amp; using citations</td>
+<td>A. Creating word processor documents<br>B. Creating &amp; using citations<br>C. Computational parts use Jupyter</td>
 <td>A. Editorial and production tasks: Review to file revision, etc<br>B. Metadata and PID use</td>
 <td>A. Collate ODT files<br>B. Encode and organisation <strong><em>Parts of a Book</em></strong><br>C. Book configuration</td>
 <td>A. Convert to multi-format: PDF, PoD, web, source, etc<br>B. Automatic layout styling<br>C. Preview<br>D. Jupyter Notebooks</td>
 <td>A. Store all outputs<br>C. Git revisioned<br>D. Public / private<br>D. Website option</td>
 </tr>
 <tr class="even">
-<td>Open-source word processor TBC; Zotero</td>
+<td>Word processor TBC; Zotero; Jupyter</td>
 <td>Nextcloud: Thoth</td>
 <td><em>New original software: NCP Make Book</em></td>
 <td>Quarto / Pandoc; Jupyter</td>
@@ -731,7 +726,7 @@ Team NCP: VEStOR (FHP); TIB
 </div>
 
 <aside><div>
-<p>Key: Parts - blue, Data - orange, Software - green</p>
+<p>Pipeline key: Parts - blue, Data - orange, Software - green</p>
 </div></aside></section>
 <section id="config-file---holds-it-all-together" class="slide level2 smaller center">
 <h2>Config File - holds it all together</h2>
@@ -761,116 +756,40 @@ Team NCP: VEStOR (FHP); TIB
 <span id="cb1-24"><a href=""></a><span class="at">    </span><span class="fu">cover-image</span><span class="kw">:</span><span class="at"> cover.png</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <aside><div>
-<p>The challenge is how to get all the part into the <a href="https://quarto.org/docs/books/#config-file">Quarto Book Config file</a>.</p>
+<p>The challenge is how to get all the part into the <a href="https://quarto.org/docs/books/#config-file">Quarto Book Config file</a>. There will be further configation files as part of the project, but this Quarto example is as an illustration of the concept.</p>
 </div></aside></section>
-<section id="diagrams-with-graphviz" class="slide level2 center">
-<h2>Diagrams with GraphViz</h2>
-<p>GraphViz supports various diagram types:</p>
-<div class="cell" data-file="diagrams/main.dot" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-1" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<svg width="960" height="480" viewbox="0.00 0.00 927.00 123.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 119)">
-<title>main</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-119 923,-119 923,4 -4,4"></polygon>
-<!-- n1 -->
-<g id="node1" class="node">
-<title>n1</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="57.5" cy="-57.5" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="57.5" y="-62.3" font-family="Helvetica,sans-Serif" font-size="16.00">1.</text>
-<text text-anchor="middle" x="57.5" y="-43.1" font-family="Helvetica,sans-Serif" font-size="16.00">Authoring</text>
-</g>
-<!-- n2 -->
-<g id="node2" class="node">
-<title>n2</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="258.5" cy="-57.5" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="258.5" y="-62.3" font-family="Helvetica,sans-Serif" font-size="16.00">2.</text>
-<text text-anchor="middle" x="258.5" y="-43.1" font-family="Helvetica,sans-Serif" font-size="16.00">Production</text>
-</g>
-<!-- n1&#45;&gt;n2 -->
-<g id="edge1" class="edge">
-<title>n1-&gt;n2</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M115.26,-57.5C138.05,-57.5 164.54,-57.5 188.44,-57.5"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="188.67,-61.7 200.67,-57.5 188.67,-53.3 188.67,-61.7"></polygon>
-</g>
-<!-- n3 -->
-<g id="node3" class="node">
-<title>n3</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="459.5" cy="-57.5" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="459.5" y="-62.3" font-family="Helvetica,sans-Serif" font-size="16.00">3.</text>
-<text text-anchor="middle" x="459.5" y="-43.1" font-family="Helvetica,sans-Serif" font-size="16.00">Make Book</text>
-</g>
-<!-- n2&#45;&gt;n3 -->
-<g id="edge2" class="edge">
-<title>n2-&gt;n3</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M316.26,-57.5C339.05,-57.5 365.54,-57.5 389.44,-57.5"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="389.67,-61.7 401.67,-57.5 389.67,-53.3 389.67,-61.7"></polygon>
-</g>
-<!-- n4 -->
-<g id="node4" class="node">
-<title>n4</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="660.5" cy="-57.5" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="660.5" y="-62.3" font-family="Helvetica,sans-Serif" font-size="16.00">4.</text>
-<text text-anchor="middle" x="660.5" y="-43.1" font-family="Helvetica,sans-Serif" font-size="16.00">Multi-format</text>
-</g>
-<!-- n3&#45;&gt;n4 -->
-<g id="edge3" class="edge">
-<title>n3-&gt;n4</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M517.26,-57.5C540.05,-57.5 566.54,-57.5 590.44,-57.5"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="590.67,-61.7 602.67,-57.5 590.67,-53.3 590.67,-61.7"></polygon>
-</g>
-<!-- n5 -->
-<g id="node5" class="node">
-<title>n5</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="861.5" cy="-57.5" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="861.5" y="-62.3" font-family="Helvetica,sans-Serif" font-size="16.00">5.</text>
-<text text-anchor="middle" x="861.5" y="-43.1" font-family="Helvetica,sans-Serif" font-size="16.00">Packaging</text>
-</g>
-<!-- n4&#45;&gt;n5 -->
-<g id="edge4" class="edge">
-<title>n4-&gt;n5</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M718.26,-57.5C741.05,-57.5 767.54,-57.5 791.44,-57.5"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="791.67,-61.7 803.67,-57.5 791.67,-53.3 791.67,-61.7"></polygon>
-</g>
-</g>
-</svg>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Main technical workflow sections 1-5
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="authoring-and-2.-production" class="slide level2 smaller center">
+<h2>1. Authoring and 2. Production</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Word processor and Zotero on Nextcloud. Computational parts are not authored here but integrated at later stage.</p>
+<p><img title="word processor" alt="word processor" src="images/wp.jpg" width="50%"></p>
+</div><div class="column" style="width:50%;">
+<p>Nextcloud allows for editorial and production customisation and flexibility with a suite of productivity tools.</p>
+<p><img title="Nextcloud" alt="Nextcloud" src="images/nc.jpg" width="50%"></p>
+</div></div>
 </section>
-<section id="diagrams-with-mermaid" class="slide level2 center">
-<h2>Diagrams with Mermaid</h2>
-<p>Mermaid diagrams for flowcharts, sequences, and more:</p>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[Start] --&gt; B{Decision}
-  B --&gt;|Yes| C[Process]
-  B --&gt;|No| D[Skip]
-  C --&gt; E[End]
-  D --&gt; E
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<section id="make-book" class="slide level2 center">
+<h2>3. Make Book</h2>
+<p>Text</p>
 </section>
-<section id="questions" class="slide level2 center">
-<h2>Questions?</h2>
-<p>Thanks for watching!</p>
+<section id="multi-format-and-5.-packaging" class="slide level2 center">
+<h2>4. Multi-format and 5. Packaging</h2>
+<p>Text</p>
+</section>
+<section id="publishers-workflow" class="slide level2 center">
+<h2>Publishers Workflow</h2>
+<p>Text</p>
+</section>
+<section id="the-new-software---make-book" class="slide level2 smaller center">
+<h2>The New Software - Make Book</h2>
+<p>Thinking, ideas, and challenges</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>contents…</p>
+</div><div class="column" style="width:50%;">
+<p>contents…</p>
+</div></div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>CC-BY-SA 4.0 License</p>

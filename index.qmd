@@ -8,9 +8,7 @@ footer: "CC-BY-SA 4.0 License"
 
 ## The NCP Pipeline Overview  {.smaller}
 
-Project objective: To enable multi-format book production for the Open Access textbook publisher 'OpenRewi'.
-
-Nextcloud is used as a foundation for a new open-source software tool and to support the tech stack. 
+Project objective: To enable multi-format book production for the Open Access textbook publisher 'OpenRewi'. Nextcloud is used as a foundation for a new open-source software tool and to support the pipeline tech stack. 
 
 ```{dot}
 //| file: diagrams/main.dot
@@ -22,8 +20,8 @@ _Definitions and tech stack_
 
 | 1. Authoring | 2. Production | 3. Make Book | 4. Multi-format | 5. Packaging |
 |---|---|---|---|---|
-| A. Creating word processor documents<br>B. Creating & using citations | A. Editorial and production tasks: Review to file revision, etc<br>B. Metadata and PID use | A. Collate ODT files<br>B. Encode and organisation **_Parts of a Book_**<br>C. Book configuration | A. Convert to multi-format: PDF, PoD, web, source, etc<br>B. Automatic layout styling<br>C. Preview<br>D. Jupyter Notebooks | A. Store all outputs<br>C. Git revisioned<br>D. Public / private<br>D. Website option |
-| Open-source word processor TBC; Zotero | Nextcloud: Thoth | _New original software: NCP Make Book_ | Quarto / Pandoc; Jupyter  | Quarto; GitLab |
+| A. Creating word processor documents<br>B. Creating & using citations<br>C. Computational parts use Jupyter | A. Editorial and production tasks: Review to file revision, etc<br>B. Metadata and PID use | A. Collate ODT files<br>B. Encode and organisation **_Parts of a Book_**<br>C. Book configuration | A. Convert to multi-format: PDF, PoD, web, source, etc<br>B. Automatic layout styling<br>C. Preview<br>D. Jupyter Notebooks | A. Store all outputs<br>C. Git revisioned<br>D. Public / private<br>D. Website option |
+| Word processor TBC; Zotero; Jupyter | Nextcloud: Thoth | _New original software: NCP Make Book_ | Quarto / Pandoc; Jupyter  | Quarto; GitLab |
 
 ::: aside
 Parts of a Book. [See Chicago Manual of Style](https://www.chicagomanualofstyle.org/book/ed17/part1/ch01/psec001.html)  
@@ -39,7 +37,7 @@ Speaker notes go here - they won't be visible to the audience
 ```
 
 ::: aside
-Key: Parts - blue, Data - orange, Software - green
+Pipeline key: Parts - blue, Data - orange, Software - green
 :::
 
 ## Config File - holds it all together {.smaller}
@@ -72,31 +70,52 @@ format:
 ```
 
 ::: aside
-The challenge is how to get all the part into the  [Quarto Book Config file](https://quarto.org/docs/books/#config-file).  
+The challenge is how to get all the part into the  [Quarto Book Config file](https://quarto.org/docs/books/#config-file). There will be further configation files as part of the project, but this Quarto example is as an illustration of the concept. 
 :::
 
-## Diagrams with GraphViz
+## 1. Authoring and 2. Production {.smaller}
 
-GraphViz supports various diagram types:
+:::: {.columns}
 
-```{dot}
-//| label: fig-1  
-//| fig-cap: "Main technical workflow sections 1-5"
-//| file: diagrams/main.dot
-```
-## Diagrams with Mermaid
+::: {.column width="50%"}
+Word processor and Zotero on Nextcloud. Computational parts are not authored here but integrated at later stage.
 
-Mermaid diagrams for flowcharts, sequences, and more:
+<img title="word processor" alt="word processor" src="images/wp.jpg" width="50%">
+:::
 
-```{mermaid}
-flowchart LR
-  A[Start] --> B{Decision}
-  B -->|Yes| C[Process]
-  B -->|No| D[Skip]
-  C --> E[End]
-  D --> E
-```
+::: {.column width="50%"}
+Nextcloud allows for editorial and production customisation and flexibility with a suite of productivity tools.
 
-## Questions?
+<img title="Nextcloud" alt="Nextcloud" src="images/nc.jpg" width="50%">
 
-Thanks for watching!
+:::
+
+::::
+
+## 3. Make Book    
+
+Text   
+
+## 4. Multi-format and 5. Packaging
+
+Text
+
+## Publishers Workflow
+
+Text
+
+## The New Software - Make Book {.smaller}
+
+Thinking, ideas, and challenges
+
+:::: {.columns}
+
+::: {.column width="50%"}
+contents...
+:::
+
+::: {.column width="50%"}
+contents...
+:::
+
+::::
