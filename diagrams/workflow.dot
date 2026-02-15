@@ -1,0 +1,68 @@
+digraph BookProduction {
+    // Landscape orientation
+    rankdir=LR;
+    
+    // Graph styling
+    bgcolor="#f8f9fa";
+    fontname="Helvetica";
+    fontsize=20;
+    
+    // Node defaults
+    node [
+        shape=box,
+        style="rounded,filled",
+        fontname="Helvetica Bold",
+        fontsize=16,
+        height=1.2,
+        width=3.0,
+        margin=0.3
+    ];
+    
+    // Edge defaults
+    edge [
+        fontname="Helvetica",
+        fontsize=14,
+        color="#495057",
+        penwidth=2.5
+    ];
+    
+    // Workflow stages with color gradient
+    manuscript [label="Manuscript\nSubmission", fillcolor="#e3f2fd", color="#1976d2"];
+    peer_review [label="Peer Review &\nRevisions", fillcolor="#e8f5e9", color="#388e3c"];
+    acceptance [label="Editorial\nAcceptance", fillcolor="#fff3e0", color="#f57c00"];
+    copyedit [label="Copyediting &\nProofreading", fillcolor="#f3e5f5", color="#7b1fa2"];
+    typesetting [label="Typesetting &\nLayout Design", fillcolor="#fce4ec", color="#c2185b"];
+    metadata [label="Metadata\nPreparation", fillcolor="#e0f2f1", color="#00796b"];
+    licensing [label="License\nAssignment (CC)", fillcolor="#fff9c4", color="#f9a825"];
+    conversion [label="Format Conversion\n(PDF, EPUB, XML)", fillcolor="#e1f5fe", color="#0277bd"];
+    repository [label="Repository\nDeposit", fillcolor="#f1f8e9", color="#558b2f"];
+    publication [label="Online\nPublication", fillcolor="#ede7f6", color="#5e35b1"];
+    preservation [label="Long-term\nPreservation", fillcolor="#fbe9e7", color="#d84315"];
+    dissemination [label="Marketing &\nDissemination", fillcolor="#e8eaf6", color="#3949ab"];
+    
+    // Workflow connections
+    manuscript -> peer_review [label="  submit"];
+    peer_review -> acceptance [label="  approved"];
+    acceptance -> copyedit [label="  accepted"];
+    copyedit -> typesetting [label="  edited"];
+    typesetting -> metadata [label="  designed"];
+    metadata -> licensing [label="  cataloged"];
+    licensing -> conversion [label="  licensed"];
+    conversion -> repository [label="  formats ready"];
+    repository -> publication [label="  deposited"];
+    publication -> preservation [label="  published"];
+    publication -> dissemination [label="  live"];
+    
+    // Optional revision loop
+    peer_review -> manuscript [label="  revise", style=dashed, color="#d32f2f"];
+    
+    // Grouping for visual clarity
+    {rank=same; manuscript; peer_review; acceptance;}
+    {rank=same; copyedit; typesetting; metadata;}
+    {rank=same; licensing; conversion; repository;}
+    {rank=same; publication; preservation; dissemination;}
+    
+    // Title
+    labelloc="t";
+    label=<<b><font point-size="24">Open Access Book Production Workflow</font></b>>;
+}

@@ -1,14 +1,14 @@
 ---
-title: "Nextcloud Publishing (NCP) - Pipeline Schematic"
-subtitle: "A first stage Beta open-source software development project"
+title: "Nextcloud Publishing (NCP) — Pipeline Schematic"
+subtitle: "A first stage Beta open-source software development project — digital sovereign by design"
 author: "Team NCP: VEStOR (FHP); TIB"
 date: today
 footer: "CC-BY-SA 4.0 License"
 ---
 
-## The NCP Pipeline Overview  {.smaller}
+## The NCP Pipeline Overview {.smaller}
 
-Project objective: To enable multi-format book production for the Open Access textbook publisher 'OpenRewi'. Nextcloud is used as a foundation for a new open-source software tool and to support the pipeline tech stack. 
+Project objective: To enable multi-format book production for the Open Access textbook publisher 'OpenRewi'. Nextcloud is used as a foundation for a new open-source software tool.
 
 ```{dot}
 //| file: diagrams/main.dot
@@ -16,33 +16,34 @@ Project objective: To enable multi-format book production for the Open Access te
 
 ## Pipeline Parts {.smaller}
 
-_Definitions and tech stack_
+*Definitions and tech stack*
 
-| 1. Authoring | 2. Production | 3. Make Book | 4. Multi-format | 5. Packaging |
-|---|---|---|---|---|
-| A. Creating word processor documents<br>B. Creating & using citations<br>C. Computational parts use Jupyter | A. Editorial and production tasks: Review to file revision, etc<br>B. Metadata and PID use | A. Collate ODT files<br>B. Encode and organisation **_Parts of a Book_**<br>C. Book configuration | A. Convert to multi-format: PDF, PoD, web, source, etc<br>B. Automatic layout styling<br>C. Preview<br>D. Jupyter Notebooks | A. Store all outputs<br>C. Git revisioned<br>D. Public / private<br>D. Website option |
-| Word processor TBC; Zotero; Jupyter | Nextcloud: Thoth | _New original software: NCP Make Book_ | Quarto / Pandoc; Jupyter  | Quarto; GitLab |
+| 1\. Authoring | 2\. Production | 3\. Make Book | 4\. Multi-format | 5\. Packaging |
+|---------------|---------------|---------------|---------------|---------------|
+| A. Creating word processor documents<br>B. Creating & using citations<br>C. Computational parts use Jupyter | A. Editorial and production tasks: Review to file revision, etc<br>B. Metadata and PID use | A. Collate ODT files<br>B. Encode and organisation ***Parts of a Book***<br>C. Book configuration | A. Convert to multi-format: PDF, PoD, web, source, etc<br>B. Automatic layout styling<br>C. Preview<br>D. Jupyter Notebooks | A. Store all outputs<br>C. Git versioning<br>D. Public or private<br>D. Website option |
+| Word processor TBC; Zotero; Jupyter | Nextcloud: Thoth | *New original software: NCP Make Book* | Quarto / Pandoc; Jupyter | Quarto; GitLab |
 
 ::: aside
-Parts of a Book. [See Chicago Manual of Style](https://www.chicagomanualofstyle.org/book/ed17/part1/ch01/psec001.html)  
-:::
-:::{.notes}
-Speaker notes go here - they won't be visible to the audience
+Parts of a Book. [See Chicago Manual of Style](https://www.chicagomanualofstyle.org/book/ed17/part1/ch01/psec001.html)
 :::
 
-## Parts, Dataflow, and Software
+::: notes
+Use <https://tablegenerator.com/markdown_tables>
+:::
+
+## Pipeline Parts and Software
 
 ```{dot}
 //| file: diagrams/data.dot
 ```
 
 ::: aside
-Pipeline key: Parts - blue; Data - orange, and; Software - green
+Pipeline key: Parts - blue, and; Software - green
 :::
 
 ## Config File - holds it all together {.smaller}
 
-```yaml
+``` yaml
 # A Quarto project configuration file (_quarto.yml)  
 project:
   type: book
@@ -70,52 +71,115 @@ format:
 ```
 
 ::: aside
-The challenge is how to get all the part into the  [Quarto Book Config file](https://quarto.org/docs/books/#config-file). There will be further configation files as part of the project, but this Quarto example is as an illustration of the concept. 
+The challenge is how to get all the *Part of a Book* into the [Quarto Book Config file](https://quarto.org/docs/books/#config-file). There will be further configuration files as part of the project, but this Quarto example is as an illustration of the concept.
 :::
 
 ## 1. Authoring and 2. Production {.smaller}
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
 Word processor and Zotero on Nextcloud. Computational parts are not authored here but integrated at later stage.
 
-<img title="word processor" alt="word processor" src="images/wp.jpg" width="50%">
+<img src="images/wp.jpg" title="word processor" alt="word processor" width="50%"/>
 :::
 
 ::: {.column width="50%"}
 Nextcloud allows for editorial and production customisation and flexibility with a suite of productivity tools.
 
-<img title="Nextcloud" alt="Nextcloud" src="images/nc.jpg" width="50%">
+<img src="images/nc.jpg" title="Nextcloud" alt="Nextcloud" width="50%"/>
+:::
+:::::
 
+## 3. Make Book 📕
+
+This is the *new software* being made for the project. Functionalities are:
+
+-   Collate ODT files
+-   Citation management
+-   Create book settings configuration, inc. Parts of a Book
+-   Incorporate book metadata
+-   Pass book data to Pandoc (Multi-format-conversion) and Quarto (Packaging)
+
+## 4. Multi-format and 5. Packaging {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+Quarto and Pandoc are used for automated multi-format conversion and typesetting.
+
+<img src="images/format.png" title="Multi-format" alt="Multi-format" width="80%"/>
 :::
 
-::::
+::: {.column width="50%"}
+Machine readable storage standard, e.g., [W3C Web Publications](https://www.w3.org/TR/wpub/)
 
-## 3. Make Book    
-
-Text   
-
-## 4. Multi-format and 5. Packaging
-
-Text
+``` yaml
+mybook/
+├─ quarto.yml
+├─ chapter1.qmd
+├─ chapter2.ipynb
+│
+├─ notebooks/figures.ipynb
+│
+├─ data/dataset.csv
+│
+├─ images/
+│
+├─ references.bib
+│
+├─ styles/custom.scss
+│
+└─ _book/
+   ├─ html/index.html
+   ├─ pdf/mybook.pdf
+   ├─ epub/mybook.epub
+   ├─ docx/mybook.docx
+   ├─ jats/mybook.xml
+   ├─ bits/mybook.xml
+   └─ notebooks/mybook.ipynb 
+```
+:::
+:::::
 
 ## Publishers Workflow
 
-Text
+```{dot}
+//| file: diagrams/workflow.dot
+```
 
-## The New Software - Make Book {.smaller}
+## The New Software - Make Book 📕 {.smaller}
 
-Thinking, ideas, and challenges
-
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
-contents...
+Ideas   
+
+-   Using esablished platforms
+-   Nextcloud as productivity suite  
+-   Using Notebooks allows for computational parts
+-   Thoth allows for metamdata distribution
+-   Leverage Quarto functionality
+-   Concept of packaging from software         
 :::
 
 ::: {.column width="50%"}
-contents...
-:::
+Challenges
 
-::::
+-   Reliability of platforms 
+-   Collating ODT files
+-   Collation and citations
+-   Citations working 
+-   Packaging  
+-   Testing word processors 
+-   Work woth Notebook authors
+ 
+    
+:::
+:::::
+
+## Next Stage  
+
+Testing book files in the workflow manually to find more explore issues.
+
+Write up schematic and workflow for as a Request for Comment (RFC) to get feedback from the community.
+
+
+
