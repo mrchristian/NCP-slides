@@ -8,13 +8,19 @@ footer: "CC-BY-SA 4.0 License"
 
 ## The NCP Pipeline Overview {.smaller}
 
-Project objective: To enable multi-format book production for the Open Access textbook publisher 'OpenRewi'. Nextcloud is used as a foundation for a new open-source software tool.
+Project objective: To enable multi-format texbook production, including computational parts,  for the Open Access textbook publisher 'OpenRewi'. 
 
+Nextcloud is used as a foundation for a new open-source software tool.
+
+<img src="images/main3.drawio.png" title="pipeline" alt="pipeline" width="100%"/>
+
+::: notes
 ```{dot}
 //| file: diagrams/main.dot
 ```
+:::
 
-## Pipeline Parts {.smaller}
+## Pipeline Stages {.smaller}
 
 *Definitions and tech stack*
 
@@ -31,14 +37,18 @@ Parts of a Book. [See Chicago Manual of Style](https://www.chicagomanualofstyle.
 Use <https://tablegenerator.com/markdown_tables>
 :::
 
-## Pipeline Parts and Software
+## Pipeline Stages and Software {.smaller}
 
+<img src="images/flow.drawio.png" title="software" alt="software" width="100%"/>
+
+::: notes
 ```{dot}
 //| file: diagrams/data.dot
 ```
+:::
 
 ::: aside
-Pipeline key: Parts - blue, and; Software - green
+Pipeline key: Satges - blue, and; Software - green
 :::
 
 ## Config File - holds it all together {.smaller}
@@ -110,9 +120,10 @@ Quarto and Pandoc are used for automated multi-format conversion and typesetting
 :::
 
 ::: {.column width="50%"}
-Machine readable storage standard, e.g., [W3C Web Publications](https://www.w3.org/TR/wpub/)
+Machine readable storage standard, e.g., [W3C Web Publications](https://www.w3.org/TR/wpub/) and Quarto structure.
 
 ``` yaml
+#Quarto file structure in a Git repository
 mybook/
 ├─ quarto.yml
 ├─ chapter1.qmd
@@ -140,11 +151,15 @@ mybook/
 :::
 :::::
 
-## Publishers Workflow
+## Publishers Workflow (Sketch)
 
+<img src="images/workflow001.drawio.png" title="workflow" alt="workflow" width="100%"/>
+
+::: notes
 ```{dot}
 //| file: diagrams/workflow.dot
 ```
+:::
 
 ## The New Software - Make Book 📕 {.smaller}
 
@@ -177,7 +192,7 @@ Challenges
 
 ## Next Stage  
 
-Testing book files in the workflow manually to find more explore issues.
+Testing book files in the workflow manually to find issues.
 
 Write up schematic and workflow for as a Request for Comment (RFC) to get feedback from the community.
 

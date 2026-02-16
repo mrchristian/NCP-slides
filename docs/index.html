@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.54">
 
   <meta name="author" content="Team NCP: VEStOR (FHP); TIB">
-  <meta name="dcterms.date" content="2026-02-15">
+  <meta name="dcterms.date" content="2026-02-16">
   <title>Nextcloud Publishing (NCP) — Pipeline Schematic</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -403,11 +403,14 @@ Team NCP: VEStOR (FHP); TIB
 </div>
 </div>
 
-  <p class="date">2026-02-15</p>
+  <p class="date">2026-02-16</p>
 </section>
 <section id="the-ncp-pipeline-overview" class="slide level2 smaller center">
 <h2>The NCP Pipeline Overview</h2>
-<p>Project objective: To enable multi-format book production for the Open Access textbook publisher ‘OpenRewi’. Nextcloud is used as a foundation for a new open-source software tool.</p>
+<p>Project objective: To enable multi-format texbook production, including computational parts, for the Open Access textbook publisher ‘OpenRewi’.</p>
+<p>Nextcloud is used as a foundation for a new open-source software tool.</p>
+
+<img src="images/main3.drawio.png" title="pipeline" alt="pipeline" width="100%" class="r-stretch"><aside class="notes">
 <div class="cell" data-file="diagrams/main.dot" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -483,9 +486,20 @@ Team NCP: VEStOR (FHP); TIB
 </div>
 </div>
 </div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="pipeline-parts" class="slide level2 smaller center">
-<h2>Pipeline Parts</h2>
+<section id="pipeline-stages" class="slide level2 smaller center">
+<h2>Pipeline Stages</h2>
 <p><em>Definitions and tech stack</em></p>
 <table class="caption-top">
 <colgroup>
@@ -538,184 +552,186 @@ Team NCP: VEStOR (FHP); TIB
 <aside><div>
 <p>Parts of a Book. <a href="https://www.chicagomanualofstyle.org/book/ed17/part1/ch01/psec001.html">See Chicago Manual of Style</a></p>
 </div></aside></section>
-<section id="pipeline-parts-and-software" class="slide level2 center">
-<h2>Pipeline Parts and Software</h2>
+<section id="pipeline-stages-and-software" class="slide level2 smaller center">
+<h2>Pipeline Stages and Software</h2>
+<p><img src="images/flow.drawio.png" title="software" alt="software" width="100%"></p>
+<aside class="notes">
 <div class="cell" data-file="diagrams/data.dot" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg width="960" height="480" viewbox="28.80 28.80 806.80 421.38" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
-<g id="graph0" class="graph" transform="scale(0.578475 0.578475) rotate(0) translate(53.79 724.43)">
+<svg width="960" height="480" viewbox="28.80 28.80 806.80 407.01" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(0.586083 0.586083) rotate(0) translate(53.14 690.46)">
 <title>main</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-674.64 1340.91,-674.64 1340.91,4 -4,4"></polygon>
-<text text-anchor="middle" x="668.46" y="-648.64" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="20.00">v 1.0 2026-02-13-13:46</text>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-641.32 1323.46,-641.32 1323.46,4 -4,4"></polygon>
+<text text-anchor="middle" x="659.73" y="-615.32" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="20.00">v 1.0 2026-02-13-13:46</text>
 <!-- n1 -->
 <g id="node1" class="node">
 <title>n1</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="389.12" cy="-156.45" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="389.12" y="-161.25" font-family="Helvetica,sans-Serif" font-size="16.00">1.</text>
-<text text-anchor="middle" x="389.12" y="-142.05" font-family="Helvetica,sans-Serif" font-size="16.00">Authoring</text>
+<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="375.7" cy="-120.17" rx="57.5" ry="57.5"></ellipse>
+<text text-anchor="middle" x="375.7" y="-124.97" font-family="Helvetica,sans-Serif" font-size="16.00">1.</text>
+<text text-anchor="middle" x="375.7" y="-105.77" font-family="Helvetica,sans-Serif" font-size="16.00">Authoring</text>
 </g>
 <!-- n2 -->
 <g id="node2" class="node">
 <title>n2</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="497.65" cy="-425.64" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="497.65" y="-430.44" font-family="Helvetica,sans-Serif" font-size="16.00">2.</text>
-<text text-anchor="middle" x="497.65" y="-411.24" font-family="Helvetica,sans-Serif" font-size="16.00">Production</text>
+<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="495.09" cy="-375.31" rx="57.5" ry="57.5"></ellipse>
+<text text-anchor="middle" x="495.09" y="-380.11" font-family="Helvetica,sans-Serif" font-size="16.00">2.</text>
+<text text-anchor="middle" x="495.09" y="-360.91" font-family="Helvetica,sans-Serif" font-size="16.00">Production</text>
 </g>
 <!-- n1&#45;&gt;n2 -->
 <g id="edge1" class="edge">
 <title>n1-&gt;n2</title>
-<path fill="none" stroke="#fa8072" stroke-width="2" d="M388.28,-214.06C389.16,-274.73 400.28,-299.73 454.4,-370.34"></path>
-<polygon fill="#fa8072" stroke="#fa8072" stroke-width="2" points="451.29,-373.2 461.95,-380.14 457.95,-368.07 451.29,-373.2"></polygon>
+<path fill="none" stroke="#fa8072" stroke-width="2" d="M379.11,-177.75C384.23,-228.55 397.45,-253.12 451.37,-321.1"></path>
+<polygon fill="#fa8072" stroke="#fa8072" stroke-width="2" points="448.12,-323.75 458.89,-330.52 454.69,-318.52 448.12,-323.75"></polygon>
 </g>
 <!-- n3 -->
 <g id="node3" class="node">
 <title>n3</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="685.92" cy="-279.93" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="685.92" y="-284.73" font-family="Helvetica,sans-Serif" font-size="16.00">3.</text>
-<text text-anchor="middle" x="685.92" y="-265.53" font-family="Helvetica,sans-Serif" font-size="16.00">Make Book</text>
+<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="606.52" cy="-159.34" rx="57.5" ry="57.5"></ellipse>
+<text text-anchor="middle" x="606.52" y="-164.14" font-family="Helvetica,sans-Serif" font-size="16.00">3.</text>
+<text text-anchor="middle" x="606.52" y="-144.94" font-family="Helvetica,sans-Serif" font-size="16.00">Make Book</text>
 </g>
 <!-- n2&#45;&gt;n3 -->
 <g id="edge2" class="edge">
 <title>n2-&gt;n3</title>
-<path fill="none" stroke="#fa8072" stroke-width="2" d="M538.14,-384.5C557.06,-367.38 578.99,-351.63 627.69,-318.86"></path>
-<polygon fill="#fa8072" stroke="#fa8072" stroke-width="2" points="630.17,-322.26 637.79,-312.08 625.49,-315.28 630.17,-322.26"></polygon>
+<path fill="none" stroke="#fa8072" stroke-width="2" d="M500.16,-317.68C506.13,-266.5 516.28,-245.61 555.42,-206.96"></path>
+<polygon fill="#fa8072" stroke="#fa8072" stroke-width="2" points="558.53,-209.79 564.22,-198.43 552.68,-203.77 558.53,-209.79"></polygon>
 </g>
 <!-- n4 -->
 <g id="node4" class="node">
 <title>n4</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="656.87" cy="-57.5" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="656.87" y="-62.3" font-family="Helvetica,sans-Serif" font-size="16.00">4.</text>
-<text text-anchor="middle" x="656.87" y="-43.1" font-family="Helvetica,sans-Serif" font-size="16.00">Multi-format</text>
+<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="751.26" cy="-99.99" rx="57.5" ry="57.5"></ellipse>
+<text text-anchor="middle" x="751.26" y="-104.79" font-family="Helvetica,sans-Serif" font-size="16.00">4.</text>
+<text text-anchor="middle" x="751.26" y="-85.59" font-family="Helvetica,sans-Serif" font-size="16.00">Multi-format</text>
 </g>
 <!-- n3&#45;&gt;n4 -->
 <g id="edge3" class="edge">
 <title>n3-&gt;n4</title>
-<path fill="none" stroke="#fa8072" stroke-width="2" d="M680.86,-222.39C676.56,-174.13 673.9,-147.31 670.8,-126.05"></path>
-<polygon fill="#fa8072" stroke="#fa8072" stroke-width="2" points="674.93,-125.25 668.92,-114.05 666.63,-126.56 674.93,-125.25"></polygon>
+<path fill="none" stroke="#fa8072" stroke-width="2" d="M651.98,-123.83C663.74,-115.33 673.01,-109.73 682.12,-106.08"></path>
+<polygon fill="#fa8072" stroke="#fa8072" stroke-width="2" points="683.56,-110.03 693.75,-102.43 681.04,-102.02 683.56,-110.03"></polygon>
 </g>
 <!-- n5 -->
 <g id="node5" class="node">
 <title>n5</title>
-<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="1174.19" cy="-519.74" rx="57.5" ry="57.5"></ellipse>
-<text text-anchor="middle" x="1174.19" y="-524.54" font-family="Helvetica,sans-Serif" font-size="16.00">5.</text>
-<text text-anchor="middle" x="1174.19" y="-505.34" font-family="Helvetica,sans-Serif" font-size="16.00">Packaging</text>
+<ellipse fill="#eaf3ff" stroke="#4a90e2" stroke-width="2" cx="1160.31" cy="-513.3" rx="57.5" ry="57.5"></ellipse>
+<text text-anchor="middle" x="1160.31" y="-518.1" font-family="Helvetica,sans-Serif" font-size="16.00">5.</text>
+<text text-anchor="middle" x="1160.31" y="-498.9" font-family="Helvetica,sans-Serif" font-size="16.00">Packaging</text>
 </g>
 <!-- n4&#45;&gt;n5 -->
 <g id="edge4" class="edge">
 <title>n4-&gt;n5</title>
-<path fill="none" stroke="#fa8072" stroke-width="2" d="M707.66,-84.94C1020.05,-253.93 1054.44,-278.9 1143.38,-456.99"></path>
-<polygon fill="#fa8072" stroke="#fa8072" stroke-width="2" points="1139.66,-458.94 1148.76,-467.81 1147.18,-455.2 1139.66,-458.94"></polygon>
+<path fill="none" stroke="#fa8072" stroke-width="2" d="M799.82,-131.53C1038.71,-286.92 1071.6,-314.03 1132.35,-449.17"></path>
+<polygon fill="#fa8072" stroke="#fa8072" stroke-width="2" points="1128.63,-451.15 1137.36,-460.4 1136.31,-447.73 1128.63,-451.15"></polygon>
 </g>
 <!-- wp -->
 <g id="node6" class="node">
 <title>wp</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M161,-510.4C161,-510.4 12,-510.4 12,-510.4 6,-510.4 0,-504.4 0,-498.4 0,-498.4 0,-457.4 0,-457.4 0,-451.4 6,-445.4 12,-445.4 12,-445.4 161,-445.4 161,-445.4 167,-445.4 173,-451.4 173,-457.4 173,-457.4 173,-498.4 173,-498.4 173,-504.4 167,-510.4 161,-510.4"></path>
-<text text-anchor="middle" x="86.5" y="-473.1" font-family="Helvetica,sans-Serif" font-size="16.00">Word processor</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M161,-505.12C161,-505.12 12,-505.12 12,-505.12 6,-505.12 0,-499.12 0,-493.12 0,-493.12 0,-452.12 0,-452.12 0,-446.12 6,-440.12 12,-440.12 12,-440.12 161,-440.12 161,-440.12 167,-440.12 173,-446.12 173,-452.12 173,-452.12 173,-493.12 173,-493.12 173,-499.12 167,-505.12 161,-505.12"></path>
+<text text-anchor="middle" x="86.5" y="-467.82" font-family="Helvetica,sans-Serif" font-size="16.00">Word processor</text>
 </g>
 <!-- wp&#45;&gt;n1 -->
 <g id="edge5" class="edge">
 <title>wp-&gt;n1</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M99.29,-445.36C145.87,-328.22 163.45,-308.27 331.05,-195.38"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="333.63,-198.7 341.24,-188.52 328.94,-191.73 333.63,-198.7"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M96.38,-439.95C136.82,-307.77 152.43,-286.75 319.73,-161.78"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="322.28,-165.12 329.38,-154.58 317.25,-158.39 322.28,-165.12"></polygon>
 </g>
 <!-- zot -->
 <g id="node7" class="node">
 <title>zot</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M185.98,-148.21C185.98,-148.21 36.98,-148.21 36.98,-148.21 30.98,-148.21 24.98,-142.21 24.98,-136.21 24.98,-136.21 24.98,-95.21 24.98,-95.21 24.98,-89.21 30.98,-83.21 36.98,-83.21 36.98,-83.21 185.98,-83.21 185.98,-83.21 191.98,-83.21 197.98,-89.21 197.98,-95.21 197.98,-95.21 197.98,-136.21 197.98,-136.21 197.98,-142.21 191.98,-148.21 185.98,-148.21"></path>
-<text text-anchor="middle" x="111.48" y="-110.91" font-family="Helvetica,sans-Serif" font-size="16.00">Zotero</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M173.11,-145.44C173.11,-145.44 24.11,-145.44 24.11,-145.44 18.11,-145.44 12.11,-139.44 12.11,-133.44 12.11,-133.44 12.11,-92.44 12.11,-92.44 12.11,-86.44 18.11,-80.44 24.11,-80.44 24.11,-80.44 173.11,-80.44 173.11,-80.44 179.11,-80.44 185.11,-86.44 185.11,-92.44 185.11,-92.44 185.11,-133.44 185.11,-133.44 185.11,-139.44 179.11,-145.44 173.11,-145.44"></path>
+<text text-anchor="middle" x="98.61" y="-108.14" font-family="Helvetica,sans-Serif" font-size="16.00">Zotero</text>
 </g>
 <!-- zot&#45;&gt;n1 -->
 <g id="edge6" class="edge">
 <title>zot-&gt;n1</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M198.15,-117.4C225.63,-120.55 259.15,-127.37 321.04,-141.15"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="320.3,-145.29 332.93,-143.81 322.13,-137.09 320.3,-145.29"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M185.15,-99.75C212.46,-99.19 245.56,-102.67 306.48,-110.77"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="306.16,-114.96 318.61,-112.39 307.27,-106.63 306.16,-114.96"></polygon>
 </g>
 <!-- nc -->
 <g id="node8" class="node">
 <title>nc</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M401.96,-608.46C401.96,-608.46 252.96,-608.46 252.96,-608.46 246.96,-608.46 240.96,-602.46 240.96,-596.46 240.96,-596.46 240.96,-555.46 240.96,-555.46 240.96,-549.46 246.96,-543.46 252.96,-543.46 252.96,-543.46 401.96,-543.46 401.96,-543.46 407.96,-543.46 413.96,-549.46 413.96,-555.46 413.96,-555.46 413.96,-596.46 413.96,-596.46 413.96,-602.46 407.96,-608.46 401.96,-608.46"></path>
-<text text-anchor="middle" x="327.46" y="-571.16" font-family="Helvetica,sans-Serif" font-size="16.00">Nextcloud</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M406.17,-589.52C406.17,-589.52 257.17,-589.52 257.17,-589.52 251.17,-589.52 245.17,-583.52 245.17,-577.52 245.17,-577.52 245.17,-536.52 245.17,-536.52 245.17,-530.52 251.17,-524.52 257.17,-524.52 257.17,-524.52 406.17,-524.52 406.17,-524.52 412.17,-524.52 418.17,-530.52 418.17,-536.52 418.17,-536.52 418.17,-577.52 418.17,-577.52 418.17,-583.52 412.17,-589.52 406.17,-589.52"></path>
+<text text-anchor="middle" x="331.67" y="-552.22" font-family="Helvetica,sans-Serif" font-size="16.00">Nextcloud</text>
 </g>
 <!-- nc&#45;&gt;n2 -->
 <g id="edge7" class="edge">
 <title>nc-&gt;n2</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M359.98,-543.36C378.87,-525.1 397.5,-509.01 443.83,-470.38"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="446.61,-473.53 453.14,-462.62 441.23,-467.08 446.61,-473.53"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M352.95,-524.5C372.68,-495.67 389.28,-477.7 444.59,-424.04"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="447.72,-426.85 453.42,-415.48 441.88,-420.81 447.72,-426.85"></polygon>
 </g>
 <!-- th -->
 <g id="node9" class="node">
 <title>th</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M730.77,-638.64C730.77,-638.64 581.77,-638.64 581.77,-638.64 575.77,-638.64 569.77,-632.64 569.77,-626.64 569.77,-626.64 569.77,-585.64 569.77,-585.64 569.77,-579.64 575.77,-573.64 581.77,-573.64 581.77,-573.64 730.77,-573.64 730.77,-573.64 736.77,-573.64 742.77,-579.64 742.77,-585.64 742.77,-585.64 742.77,-626.64 742.77,-626.64 742.77,-632.64 736.77,-638.64 730.77,-638.64"></path>
-<text text-anchor="middle" x="656.27" y="-601.34" font-family="Helvetica,sans-Serif" font-size="16.00">Thoth</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M693.44,-605.32C693.44,-605.32 544.44,-605.32 544.44,-605.32 538.44,-605.32 532.44,-599.32 532.44,-593.32 532.44,-593.32 532.44,-552.32 532.44,-552.32 532.44,-546.32 538.44,-540.32 544.44,-540.32 544.44,-540.32 693.44,-540.32 693.44,-540.32 699.44,-540.32 705.44,-546.32 705.44,-552.32 705.44,-552.32 705.44,-593.32 705.44,-593.32 705.44,-599.32 699.44,-605.32 693.44,-605.32"></path>
+<text text-anchor="middle" x="618.94" y="-568.02" font-family="Helvetica,sans-Serif" font-size="16.00">Thoth</text>
 </g>
 <!-- th&#45;&gt;n2 -->
 <g id="edge8" class="edge">
 <title>th-&gt;n2</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M592.01,-573.61C562.69,-555.4 548.41,-535.97 526.28,-489.27"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="529.99,-487.29 521.12,-478.19 522.38,-490.84 529.99,-487.29"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M572.97,-540.13C541.73,-515.5 530.17,-495.87 514,-442.5"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="518.02,-441.29 510.59,-430.98 509.97,-443.67 518.02,-441.29"></polygon>
 </g>
 <!-- nos -->
 <g id="node10" class="node">
 <title>nos</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M942.87,-547.97C942.87,-547.97 793.87,-547.97 793.87,-547.97 787.87,-547.97 781.87,-541.97 781.87,-535.97 781.87,-535.97 781.87,-494.97 781.87,-494.97 781.87,-488.97 787.87,-482.97 793.87,-482.97 793.87,-482.97 942.87,-482.97 942.87,-482.97 948.87,-482.97 954.87,-488.97 954.87,-494.97 954.87,-494.97 954.87,-535.97 954.87,-535.97 954.87,-541.97 948.87,-547.97 942.87,-547.97"></path>
-<text text-anchor="middle" x="868.37" y="-510.67" font-family="Helvetica,sans-Serif" font-size="16.00">New software (MB)</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M917.47,-530.97C917.47,-530.97 768.47,-530.97 768.47,-530.97 762.47,-530.97 756.47,-524.97 756.47,-518.97 756.47,-518.97 756.47,-477.97 756.47,-477.97 756.47,-471.97 762.47,-465.97 768.47,-465.97 768.47,-465.97 917.47,-465.97 917.47,-465.97 923.47,-465.97 929.47,-471.97 929.47,-477.97 929.47,-477.97 929.47,-518.97 929.47,-518.97 929.47,-524.97 923.47,-530.97 917.47,-530.97"></path>
+<text text-anchor="middle" x="842.97" y="-493.67" font-family="Helvetica,sans-Serif" font-size="16.00">New software (MB)</text>
 </g>
 <!-- nos&#45;&gt;n3 -->
 <g id="edge9" class="edge">
 <title>nos-&gt;n3</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M851.3,-482.89C826.67,-437.18 810.1,-416.24 732.93,-331.42"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="735.94,-328.49 724.76,-322.45 729.73,-334.15 735.94,-328.49"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M833.13,-465.93C803.32,-369.15 788.07,-346.85 655.26,-209.56"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="658.13,-206.48 646.77,-200.78 652.1,-212.33 658.13,-206.48"></polygon>
 </g>
 <!-- qp -->
 <g id="node11" class="node">
 <title>qp</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M1051.35,-294.01C1051.35,-294.01 902.35,-294.01 902.35,-294.01 896.35,-294.01 890.35,-288.01 890.35,-282.01 890.35,-282.01 890.35,-241.01 890.35,-241.01 890.35,-235.01 896.35,-229.01 902.35,-229.01 902.35,-229.01 1051.35,-229.01 1051.35,-229.01 1057.35,-229.01 1063.35,-235.01 1063.35,-241.01 1063.35,-241.01 1063.35,-282.01 1063.35,-282.01 1063.35,-288.01 1057.35,-294.01 1051.35,-294.01"></path>
-<text text-anchor="middle" x="976.85" y="-256.71" font-family="Helvetica,sans-Serif" font-size="16.00">Quarto / Pandoc</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M1047.06,-301.21C1047.06,-301.21 898.06,-301.21 898.06,-301.21 892.06,-301.21 886.06,-295.21 886.06,-289.21 886.06,-289.21 886.06,-248.21 886.06,-248.21 886.06,-242.21 892.06,-236.21 898.06,-236.21 898.06,-236.21 1047.06,-236.21 1047.06,-236.21 1053.06,-236.21 1059.06,-242.21 1059.06,-248.21 1059.06,-248.21 1059.06,-289.21 1059.06,-289.21 1059.06,-295.21 1053.06,-301.21 1047.06,-301.21"></path>
+<text text-anchor="middle" x="972.56" y="-263.91" font-family="Helvetica,sans-Serif" font-size="16.00">Quarto / Pandoc</text>
 </g>
 <!-- qp&#45;&gt;n4 -->
 <g id="edge10" class="edge">
 <title>qp-&gt;n4</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M954.39,-228.93C878.72,-120.02 857.84,-103.37 725.01,-72.67"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="725.74,-68.53 713.1,-69.95 723.87,-76.72 725.74,-68.53"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M954.28,-236.15C916.49,-170.21 899.44,-154.63 816.8,-123.6"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="818.26,-119.67 805.55,-119.43 815.34,-127.54 818.26,-119.67"></polygon>
 </g>
 <!-- qpk -->
 <g id="node12" class="node">
 <title>qpk</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M965.33,-82.38C965.33,-82.38 816.33,-82.38 816.33,-82.38 810.33,-82.38 804.33,-76.38 804.33,-70.38 804.33,-70.38 804.33,-29.38 804.33,-29.38 804.33,-23.38 810.33,-17.38 816.33,-17.38 816.33,-17.38 965.33,-17.38 965.33,-17.38 971.33,-17.38 977.33,-23.38 977.33,-29.38 977.33,-29.38 977.33,-70.38 977.33,-70.38 977.33,-76.38 971.33,-82.38 965.33,-82.38"></path>
-<text text-anchor="middle" x="890.83" y="-45.08" font-family="Helvetica,sans-Serif" font-size="16.00">Quarto</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M975.09,-67.88C975.09,-67.88 826.09,-67.88 826.09,-67.88 820.09,-67.88 814.09,-61.88 814.09,-55.88 814.09,-55.88 814.09,-14.88 814.09,-14.88 814.09,-8.88 820.09,-2.88 826.09,-2.88 826.09,-2.88 975.09,-2.88 975.09,-2.88 981.09,-2.88 987.09,-8.88 987.09,-14.88 987.09,-14.88 987.09,-55.88 987.09,-55.88 987.09,-61.88 981.09,-67.88 975.09,-67.88"></path>
+<text text-anchor="middle" x="900.59" y="-30.58" font-family="Helvetica,sans-Serif" font-size="16.00">Quarto</text>
 </g>
 <!-- qpk&#45;&gt;n5 -->
 <g id="edge11" class="edge">
 <title>qpk-&gt;n5</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M927.15,-82.41C1118.27,-253.93 1140.49,-282.13 1164.78,-450.52"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="1160.66,-451.33 1166.5,-462.62 1168.97,-450.15 1160.66,-451.33"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M934.14,-67.88C1116.67,-245.01 1137.34,-273.5 1154.07,-443.95"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="1149.89,-444.38 1155.22,-455.93 1158.25,-443.58 1149.89,-444.38"></polygon>
 </g>
 <!-- jup -->
 <g id="node13" class="node">
 <title>jup</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M1173.84,-74.9C1173.84,-74.9 1024.84,-74.9 1024.84,-74.9 1018.84,-74.9 1012.84,-68.9 1012.84,-62.9 1012.84,-62.9 1012.84,-21.9 1012.84,-21.9 1012.84,-15.9 1018.84,-9.9 1024.84,-9.9 1024.84,-9.9 1173.84,-9.9 1173.84,-9.9 1179.84,-9.9 1185.84,-15.9 1185.84,-21.9 1185.84,-21.9 1185.84,-62.9 1185.84,-62.9 1185.84,-68.9 1179.84,-74.9 1173.84,-74.9"></path>
-<text text-anchor="middle" x="1099.34" y="-37.6" font-family="Helvetica,sans-Serif" font-size="16.00">Jupyter</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M1162.19,-65C1162.19,-65 1013.19,-65 1013.19,-65 1007.19,-65 1001.19,-59 1001.19,-53 1001.19,-53 1001.19,-12 1001.19,-12 1001.19,-6 1007.19,0 1013.19,0 1013.19,0 1162.19,0 1162.19,0 1168.19,0 1174.19,-6 1174.19,-12 1174.19,-12 1174.19,-53 1174.19,-53 1174.19,-59 1168.19,-65 1162.19,-65"></path>
+<text text-anchor="middle" x="1087.69" y="-27.7" font-family="Helvetica,sans-Serif" font-size="16.00">Jupyter</text>
 </g>
 <!-- jup&#45;&gt;n5 -->
 <g id="edge12" class="edge">
 <title>jup-&gt;n5</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M1118.16,-74.92C1220.71,-252.62 1229.43,-280.77 1190.18,-451.94"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="1186.08,-451.06 1187.47,-463.7 1194.26,-452.95 1186.08,-451.06"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M1106.28,-65.18C1208.69,-245.74 1217.35,-274.12 1176.82,-445.44"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="1172.71,-444.56 1174.02,-457.21 1180.88,-446.51 1172.71,-444.56"></polygon>
 </g>
 <!-- gl -->
 <g id="node14" class="node">
 <title>gl</title>
-<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M1324.91,-197.51C1324.91,-197.51 1175.91,-197.51 1175.91,-197.51 1169.91,-197.51 1163.91,-191.51 1163.91,-185.51 1163.91,-185.51 1163.91,-144.51 1163.91,-144.51 1163.91,-138.51 1169.91,-132.51 1175.91,-132.51 1175.91,-132.51 1324.91,-132.51 1324.91,-132.51 1330.91,-132.51 1336.91,-138.51 1336.91,-144.51 1336.91,-144.51 1336.91,-185.51 1336.91,-185.51 1336.91,-191.51 1330.91,-197.51 1324.91,-197.51"></path>
-<text text-anchor="middle" x="1250.41" y="-160.21" font-family="Helvetica,sans-Serif" font-size="16.00">GitLab</text>
+<path fill="#b9eab3" stroke="#4a90e2" stroke-width="2" d="M1307.46,-192.31C1307.46,-192.31 1158.46,-192.31 1158.46,-192.31 1152.46,-192.31 1146.46,-186.31 1146.46,-180.31 1146.46,-180.31 1146.46,-139.31 1146.46,-139.31 1146.46,-133.31 1152.46,-127.31 1158.46,-127.31 1158.46,-127.31 1307.46,-127.31 1307.46,-127.31 1313.46,-127.31 1319.46,-133.31 1319.46,-139.31 1319.46,-139.31 1319.46,-180.31 1319.46,-180.31 1319.46,-186.31 1313.46,-192.31 1307.46,-192.31"></path>
+<text text-anchor="middle" x="1232.96" y="-155.01" font-family="Helvetica,sans-Serif" font-size="16.00">GitLab</text>
 </g>
 <!-- gl&#45;&gt;n5 -->
 <g id="edge13" class="edge">
 <title>gl-&gt;n5</title>
-<path fill="none" stroke="#4a90e2" stroke-width="2" d="M1256.61,-197.74C1280.53,-325.79 1278.85,-351.19 1211.49,-460.45"></path>
-<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="1207.75,-458.53 1204.99,-470.94 1214.89,-462.95 1207.75,-458.53"></polygon>
+<path fill="none" stroke="#4a90e2" stroke-width="2" d="M1239.4,-192.7C1264.2,-321.06 1262.81,-346.62 1197.28,-454.01"></path>
+<polygon fill="#4a90e2" stroke="#4a90e2" stroke-width="2" points="1193.66,-451.89 1190.96,-464.31 1200.82,-456.28 1193.66,-451.89"></polygon>
 </g>
 </g>
 </svg>
@@ -724,9 +740,20 @@ Team NCP: VEStOR (FHP); TIB
 </div>
 </div>
 </div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 <aside><div>
-<p>Pipeline key: Parts - blue, and; Software - green</p>
+<p>Pipeline key: Satges - blue, and; Software - green</p>
 </div></aside></section>
 <section id="config-file---holds-it-all-together" class="slide level2 smaller center">
 <h2>Config File - holds it all together</h2>
@@ -787,34 +814,37 @@ Team NCP: VEStOR (FHP); TIB
 <p>Quarto and Pandoc are used for automated multi-format conversion and typesetting.</p>
 <p><img src="images/format.png" title="Multi-format" alt="Multi-format" width="80%"></p>
 </div><div class="column" style="width:50%;">
-<p>Machine readable storage standard, e.g., <a href="https://www.w3.org/TR/wpub/">W3C Web Publications</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href=""></a><span class="at">mybook/</span></span>
-<span id="cb2-2"><a href=""></a><span class="at">├─ quarto.yml</span></span>
-<span id="cb2-3"><a href=""></a><span class="at">├─ chapter1.qmd</span></span>
-<span id="cb2-4"><a href=""></a><span class="at">├─ chapter2.ipynb</span></span>
-<span id="cb2-5"><a href=""></a><span class="at">│</span></span>
-<span id="cb2-6"><a href=""></a><span class="at">├─ notebooks/figures.ipynb</span></span>
-<span id="cb2-7"><a href=""></a><span class="at">│</span></span>
-<span id="cb2-8"><a href=""></a><span class="at">├─ data/dataset.csv</span></span>
-<span id="cb2-9"><a href=""></a><span class="at">│</span></span>
-<span id="cb2-10"><a href=""></a><span class="at">├─ images/</span></span>
-<span id="cb2-11"><a href=""></a><span class="at">│</span></span>
-<span id="cb2-12"><a href=""></a><span class="at">├─ references.bib</span></span>
-<span id="cb2-13"><a href=""></a><span class="at">│</span></span>
-<span id="cb2-14"><a href=""></a><span class="at">├─ styles/custom.scss</span></span>
-<span id="cb2-15"><a href=""></a><span class="at">│</span></span>
-<span id="cb2-16"><a href=""></a><span class="at">└─ _book/</span></span>
-<span id="cb2-17"><a href=""></a><span class="at">   ├─ html/index.html</span></span>
-<span id="cb2-18"><a href=""></a><span class="at">   ├─ pdf/mybook.pdf</span></span>
-<span id="cb2-19"><a href=""></a><span class="at">   ├─ epub/mybook.epub</span></span>
-<span id="cb2-20"><a href=""></a><span class="at">   ├─ docx/mybook.docx</span></span>
-<span id="cb2-21"><a href=""></a><span class="at">   ├─ jats/mybook.xml</span></span>
-<span id="cb2-22"><a href=""></a><span class="at">   ├─ bits/mybook.xml</span></span>
-<span id="cb2-23"><a href=""></a><span class="at">   └─ notebooks/mybook.ipynb </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Machine readable storage standard, e.g., <a href="https://www.w3.org/TR/wpub/">W3C Web Publications</a> and Quarto structure.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href=""></a><span class="co">#Quarto file structure in a Git repository</span></span>
+<span id="cb2-2"><a href=""></a><span class="at">mybook/</span></span>
+<span id="cb2-3"><a href=""></a><span class="at">├─ quarto.yml</span></span>
+<span id="cb2-4"><a href=""></a><span class="at">├─ chapter1.qmd</span></span>
+<span id="cb2-5"><a href=""></a><span class="at">├─ chapter2.ipynb</span></span>
+<span id="cb2-6"><a href=""></a><span class="at">│</span></span>
+<span id="cb2-7"><a href=""></a><span class="at">├─ notebooks/figures.ipynb</span></span>
+<span id="cb2-8"><a href=""></a><span class="at">│</span></span>
+<span id="cb2-9"><a href=""></a><span class="at">├─ data/dataset.csv</span></span>
+<span id="cb2-10"><a href=""></a><span class="at">│</span></span>
+<span id="cb2-11"><a href=""></a><span class="at">├─ images/</span></span>
+<span id="cb2-12"><a href=""></a><span class="at">│</span></span>
+<span id="cb2-13"><a href=""></a><span class="at">├─ references.bib</span></span>
+<span id="cb2-14"><a href=""></a><span class="at">│</span></span>
+<span id="cb2-15"><a href=""></a><span class="at">├─ styles/custom.scss</span></span>
+<span id="cb2-16"><a href=""></a><span class="at">│</span></span>
+<span id="cb2-17"><a href=""></a><span class="at">└─ _book/</span></span>
+<span id="cb2-18"><a href=""></a><span class="at">   ├─ html/index.html</span></span>
+<span id="cb2-19"><a href=""></a><span class="at">   ├─ pdf/mybook.pdf</span></span>
+<span id="cb2-20"><a href=""></a><span class="at">   ├─ epub/mybook.epub</span></span>
+<span id="cb2-21"><a href=""></a><span class="at">   ├─ docx/mybook.docx</span></span>
+<span id="cb2-22"><a href=""></a><span class="at">   ├─ jats/mybook.xml</span></span>
+<span id="cb2-23"><a href=""></a><span class="at">   ├─ bits/mybook.xml</span></span>
+<span id="cb2-24"><a href=""></a><span class="at">   └─ notebooks/mybook.ipynb </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
-<section id="publishers-workflow" class="slide level2 center">
-<h2>Publishers Workflow</h2>
+<section id="publishers-workflow-sketch" class="slide level2 center">
+<h2>Publishers Workflow (Sketch)</h2>
+
+<img src="images/workflow001.drawio.png" title="workflow" alt="workflow" width="100%" class="r-stretch"><aside class="notes">
 <div class="cell" data-file="diagrams/workflow.dot" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -1000,6 +1030,17 @@ Team NCP: VEStOR (FHP); TIB
 </div>
 </div>
 </div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="the-new-software---make-book" class="slide level2 smaller center">
 <h2>The New Software - Make Book 📕</h2>
@@ -1032,7 +1073,7 @@ Team NCP: VEStOR (FHP); TIB
 </section>
 <section id="next-stage" class="slide level2 center">
 <h2>Next Stage</h2>
-<p>Testing book files in the workflow manually to find more explore issues.</p>
+<p>Testing book files in the workflow manually to find issues.</p>
 <p>Write up schematic and workflow for as a Request for Comment (RFC) to get feedback from the community.</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
