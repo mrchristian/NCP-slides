@@ -8,7 +8,7 @@ footer: "CC-BY-SA 4.0 License"
 
 ## The NCP Pipeline Overview {.smaller}
 
-Project objective: To enable multi-format texbook production, including computational parts,  for the Open Access textbook publisher 'OpenRewi'. 
+Project objective: To enable multi-format textbook production, including computational parts, for the Open Access textbook publisher 'OpenRewi'.
 
 Nextcloud is used as a foundation for a new open-source software tool.
 
@@ -25,7 +25,7 @@ Nextcloud is used as a foundation for a new open-source software tool.
 *Definitions and tech stack*
 
 | 1\. Authoring | 2\. Production | 3\. Make Book | 4\. Multi-format | 5\. Packaging |
-|---------------|---------------|---------------|---------------|---------------|
+|----|----|----|----|----|
 | A. Creating word processor documents<br>B. Creating & using citations<br>C. Computational parts use Jupyter | A. Editorial and production tasks: Review to file revision, etc<br>B. Metadata and PID use | A. Collate ODT files<br>B. Encode and organisation ***Parts of a Book***<br>C. Book configuration | A. Convert to multi-format: PDF, PoD, web, source, etc<br>B. Automatic layout styling<br>C. Preview<br>D. Jupyter Notebooks | A. Store all outputs<br>C. Git versioning<br>D. Public or private<br>D. Website option |
 | Word processor TBC; Zotero; Jupyter | Nextcloud: Thoth | *New original software: NCP Make Book* | Quarto / Pandoc; Jupyter | Quarto; GitLab |
 
@@ -165,36 +165,31 @@ mybook/
 
 ::::: columns
 ::: {.column width="50%"}
-Ideas   
+Ideas
 
 -   Using esablished platforms
--   Nextcloud as productivity suite  
+-   Nextcloud as productivity suite\
 -   Using Notebooks allows for computational parts
 -   Thoth allows for metamdata distribution
 -   Leverage Quarto functionality
--   Concept of packaging from software         
+-   Concept of packaging from software\
 :::
 
 ::: {.column width="50%"}
 Challenges
 
--   Reliability of platforms 
+-   Reliability of platforms
 -   Collating ODT files
 -   Collation and citations
--   Citations working 
--   Packaging  
--   Testing word processors 
+-   Citations working
+-   Packaging\
+-   Testing word processors
 -   Work woth Notebook authors
- 
-    
 :::
 :::::
 
-## Next Stage  
+## Next Stage
 
 Testing book files in the workflow manually to find issues.
 
 Write up schematic and workflow for as a Request for Comment (RFC) to get feedback from the community.
-
-
-
